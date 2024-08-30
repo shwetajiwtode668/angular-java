@@ -8,4 +8,7 @@
 ### 22nd aug
 1. How to create parameterised jobs using variable($NAME)
 2. Pull code from github
-3. How to create pipeline
+3. How to create pipeline(declarative)
+
+### 23rd aug
+1. 
