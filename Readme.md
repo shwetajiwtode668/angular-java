@@ -20,3 +20,7 @@
 2. How to build maven project(got .war application)
 3. Installed tomcat server on another instance
 4. deployed application studentapp-ui (<pub_ip>:8080/studentapp-2.2-SNAPSHOT)
+
+### 27th aug
+1.How to integrate mavens with jenkins
+
