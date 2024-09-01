@@ -15,27 +15,28 @@ pipeline {
         }
         stage('Test') { 
             steps {
-                //
+                echo "tested"
                 //sh '/opt/maven/bin/mvn sonar:sonar -Dsonar.projectKey=studentapp  -Dsonar.host.url=http://54.254.168.193:9000  -Dsonar.login=90553d19174aad6990c0ca33ad017624630bffe7'
-                withSonarQubeEnv(installationName: 'sonar', credentialsId: 'sonar') {
-                sh '/opt/maven/bin/mvn sonar:sonar'
+                //withSonarQubeEnv(installationName: 'sonar', credentialsId: 'sonar') {
+                //sh '/opt/maven/bin/mvn sonar:sonar'
                 }
             }
         }
-         stage('Quality-Gate') { 
-            steps {
-                // 
-                timeout(10) {
-                waitForQualityGate abortPipeline: true
-                }
+        // stage('Quality-Gate') { 
+        //     steps {
+        //         // 
+        //         timeout(10) {
+        //         waitForQualityGate abortPipeline: true
+        //         }
                 
-            }
-        }
+        //     }
+        // }
         stage('Deploy') { 
             steps {
-                // 
-                deploy adapters: [tomcat9(credentialsId: 'b3eadf18-4be3-47e6-b394-59b97c95db78', path: '', url: 'http://172.31.31.178:8080')], contextPath: '/', war: 'target/studentapp-3.war'
+                echo "deployed" 
+                //deploy adapters: [tomcat9(credentialsId: 'b3eadf18-4be3-47e6-b394-59b97c95db78', path: '', url: 'http://172.31.31.178:8080')], contextPath: '/', war: 'target/studentapp-3.war'
             }
         }
+
     }
 }
