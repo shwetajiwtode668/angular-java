@@ -34,7 +34,7 @@ pipeline {
         stage('Deploy') { 
             steps {
                 // 
-                echo "Application Deploy"
+                deploy adapters: [tomcat9(credentialsId: 'b3eadf18-4be3-47e6-b394-59b97c95db78', path: '', url: 'http://172.31.31.178:8080')], contextPath: '/', war: 'target/studentapp-3.war'
             }
         }
     }

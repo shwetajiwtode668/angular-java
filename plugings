@@ -5,4 +5,4 @@
 5. Pipeline:Stage View
 6. SonarScanner
 7. Sonar Quality Gates
-
+8.Deploy to container
